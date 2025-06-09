@@ -1,0 +1,74 @@
+
+.body {
+    margin: auto; 
+    border: 5px solid black;
+    border-radius: 50px;
+    height: 400px; 
+    width: 160px;
+    background-color: rgba(160, 155, 55, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.base {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin: auto;
+}
+
+.stick {
+    background-color: grey;
+    width: 50px;
+    border: 5px solid black;
+    border-bottom: 0;
+    height: 200px;
+    margin: auto;
+}
+
+.plate {
+    background-color: grey;
+    border: 5px solid black;
+    border-radius: 5px;
+    width: 160px;
+    height: 10px;
+    margin: auto;
+}
+
+.light{
+    border: 10px solid black; 
+    border-radius: 60%;
+    height: 100px;
+    width: 100px;
+
+    --light-color: gray;
+    background-color: var(--light-color);
+
+    opacity: 0.7;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+    animation: change_color 9s infinite steps(1);
+}
+
+.red {
+    --light-color: red;
+    animation-delay: 0s;
+}
+.green {
+
+    --light-color: green;
+    animation-delay: 3s;
+    
+}
+.yellow {
+    --light-color: yellow;
+    animation-delay: 6s;
+}
+
+@keyframes change_color {
+    0%, 33% {opacity:1; box-shadow: 0 0 100px var(--light-color);}
+    33.1%, 100% {opacity: 0.7; box-shadow: 0 0 5px rgba(0,0,0,0.5);}
+}
